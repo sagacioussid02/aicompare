@@ -1,15 +1,22 @@
-# Getting Started with Create React App
+# About
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Compare the responses of multiple AI models
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+This can be plugged in any platform independent system and run. This is not meant for running in any production environment. The user interface and server are currently in same repository. Steps to run this project locally:
+ * Clone this project
+ * Go to the folder from terminal
+ * Install the required dependencies in the project directory by running:
+ 
+ ### `npm install`
+
+ * Start the server:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -39,27 +46,27 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+* In a separate terminal inside project directory run:
+  ### node server.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will run the server which will be listening for request at port 3001.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## APIS:
+Server constitutes of 2 REST APIs:
+1. POST /openai-api
+2. POST /gemini-api
 
-### Code Splitting
+Request body looks like:
+{
+   "body:" {
+        "prompt": "<Enter PROMPT HERE>"
+    }
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This is just a basic outline of the project functionality. I will appreciate any contribution. Put a Pull Request out and I will review and merge.
 
 ### Deployment
 
